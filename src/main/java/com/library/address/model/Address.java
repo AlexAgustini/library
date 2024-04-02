@@ -8,6 +8,17 @@ public class Address {
     private String neighborhood;
     private int number;
 
+    public Address() {
+    }
+
+    public Address(String street, String state, String country, String neighborhood, int number) {
+        this.street = street;
+        this.state = state;
+        this.country = country;
+        this.neighborhood = neighborhood;
+        this.number = number;
+    }
+
     public String getStreet() {
         return street;
     }
@@ -48,4 +59,12 @@ public class Address {
     public void setNumber(int number) {
         this.number = number;
     }
+
+    @Override
+    public String toString() {
+        return "Address [street=" + street + ", state=" + state + ", country=" + country + ", neighborhood="
+                + neighborhood + ", number=" + number + "]";
+    }
+
+    
 }

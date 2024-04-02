@@ -4,12 +4,41 @@ import java.util.List;
 
 public class Book {
 
+    private String name;
     private String author;
     private List <String> genres;
     private int releaseYear;
     private int numberOfPages;
     private int stockQuantity;
-    private int price;
+    private double price;
+
+    public Book() {};
+
+    public Book(
+        String name, 
+        String author, 
+        List<String> genres, 
+        int releaseYear, 
+        int numberOfPages, 
+        int stockQuantity,
+        double price
+    ) {
+        this.name = name;
+        this.author = author;
+        this.genres = genres;
+        this.releaseYear = releaseYear;
+        this.numberOfPages = numberOfPages;
+        this.stockQuantity = stockQuantity;
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getAuthor() {
         return author;
@@ -52,11 +81,19 @@ public class Book {
         this.stockQuantity = stockQuantity;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Book [name=" + name + ", author=" + author + ", genres=" + genres + ", releaseYear=" + releaseYear
+                + ", numberOfPages=" + numberOfPages + ", stockQuantity=" + stockQuantity + ", price=" + price + "]";
+    }
+
+    
 }
