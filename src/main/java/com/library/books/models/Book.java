@@ -91,8 +91,8 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book [name=" + name + ", author=" + author + ", genres=" + genres + ", releaseYear=" + releaseYear
-                + ", numberOfPages=" + numberOfPages + ", stockQuantity=" + stockQuantity + ", price=" + price + "]";
+        return "Book [\nname=" + name + ", \nauthor=" + author + ",\ngenres=" + genres + ",\nreleaseYear=" + releaseYear
+                + ",\nnumberOfPages=" + numberOfPages + ",\nstockQuantity=" + stockQuantity + ",\nprice=" + price + "]";
     }
 
     

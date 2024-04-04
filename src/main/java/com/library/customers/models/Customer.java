@@ -51,6 +51,6 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer [name=" + name + ", email=" + email + ", age=" + age + ", address=" + address + "]";
+        return "Customer [\nname=" + name + ",\nemail=" + email + ",\nage=" + age + ",\naddress=" + address + "]";
     }
 }

@@ -11,8 +11,17 @@ import com.library.customers.models.Customer;
 public class MockDatabase {
     
     private List<Book> booksInStock = new ArrayList<Book>();
+    
+    public List<Book> getBooksInStock() {
+        return booksInStock;
+    }
+
     private List<Customer> customers = new ArrayList<Customer>();
         
+    public List<Customer> getCustomers() {
+        return customers;
+    }
+
     public MockDatabase() {
         initializeBooks();
         initializeCustomers();
@@ -45,23 +54,6 @@ public class MockDatabase {
             83, 
             38, 
             97.59
-            ),
-            new Book(
-            "Livro 4", 
-            "Mateus", 
-            Arrays.asList("História", "Antiguidade"), 
-            1952, 
-            743, 
-            192, 
-            301.85
-            ), new Book(
-            "Livro 5", 
-            "Lucas", 
-            Arrays.asList("Suspense"), 
-            2006, 
-            248, 
-            68, 
-            113.85
             )
         ));
     }

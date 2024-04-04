@@ -8,8 +8,8 @@ public class BookPurchase {
         super();
     }
 
-    public BookPurchase(com.library.books.models.Book book, int quantity) {
-        book = book;
+    public BookPurchase(Book book, int quantity) {
+        this.book = book;
         this.quantity = quantity;
     }
 
@@ -18,7 +18,7 @@ public class BookPurchase {
     }
 
     public void setBook(Book book) {
-        book = book;
+        this.book = book;
     }
 
     public int getQuantity() {
@@ -28,4 +28,11 @@ public class BookPurchase {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public String toString() {
+        return "BookPurchase [\nbook=" + book + ", \nquantity=" + quantity + "]";
+    }
+    
+    
 }

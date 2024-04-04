@@ -44,11 +44,17 @@ public class Order {
         this.customer = customer;
     }
 
-    public double getValue() {
+    public double getTotalPrice() {
         return totalPrice;
     }
     
-    public void setValue(double totalPrice) {
+    public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Order [\nbooks=" + books + ", \ncustomer=" + customer + ", \npayments=" + payments + ", \ntotalPrice="
+                + totalPrice + "]";
     }
 }

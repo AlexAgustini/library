@@ -1,17 +1,28 @@
 package com.library.helpers;
 
-import com.library.orders.model.Order;
 
 public class Payment {
-    private Order order;
     private PaymentMethodEnum paymentMethodEnum;
+    
+    public PaymentMethodEnum getPaymentMethod() {
+        return paymentMethodEnum;
+    }
+
     private double price;
+
+    public double getPrice() {
+        return price;
+    }
 
     public Payment() {};
 
-    public Payment(Order order, PaymentMethodEnum paymentMethodEnum, double price) {
-        this.order = order;
+    public Payment(PaymentMethodEnum paymentMethodEnum, double price) {
         this.paymentMethodEnum = paymentMethodEnum;
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Payment [\npaymentMethodEnum=" + paymentMethodEnum + ",\nprice=" + price + "]";
     }
 }
