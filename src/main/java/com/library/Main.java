@@ -1,6 +1,7 @@
 package com.library;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.library.books.models.Book;
@@ -27,15 +28,11 @@ public class Main {
         List<Book> mockBooks = mockDatabase.getBooksInStock();
         List<BookPurchase> purchasedBooks = new  ArrayList<BookPurchase>();
 
-        purchasedBooks.add(
-            new BookPurchase(mockBooks.get(0), 3)
-        );
-        purchasedBooks.add(
-            new BookPurchase(mockBooks.get(1), 2)
-        );
-        purchasedBooks.add(
+        purchasedBooks.addAll(Arrays.asList(
+            new BookPurchase(mockBooks.get(0), 3),
+            new BookPurchase(mockBooks.get(1), 2),
             new BookPurchase(mockBooks.get(2), 7)
-        );
+        ));
 
         double totalPrice = 0;
 
@@ -45,13 +42,10 @@ public class Main {
 
         List<Payment> payments = new ArrayList<Payment>();
 
-        payments.add(
-            new Payment(PaymentMethodEnum.CREDIT_CARD, totalPrice * 0.7)
-        );
-
-        payments.add(
+        payments.addAll(Arrays.asList(
+            new Payment(PaymentMethodEnum.CREDIT_CARD, totalPrice * 0.7),
             new Payment(PaymentMethodEnum.BANKSLIP, totalPrice * 0.3)
-        );
+        ));
 
         System.out.println("--------Iniciando pedido-------- \n");
 
